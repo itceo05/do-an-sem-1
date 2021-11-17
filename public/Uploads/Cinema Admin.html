@@ -1,0 +1,593 @@
+
+<!-- saved from url=(0033)http://127.0.0.1:8000/admin/bills -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    font-family: monospace;
+}
+
+.dataTables_filter label {
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: right;
+    
+}
+
+.dataTables_info {
+    font-family: monospace;
+    padding-top: 10px;
+}
+.pagination {
+    padding: 10px;
+    justify-content: flex-end;
+}
+</style>
+
+
+
+
+
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cinema Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="./Cinema Admin_files/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./Cinema Admin_files/vendor.bundle.base.css">
+    <link rel="stylesheet" href="./Cinema Admin_files/all.css">
+    <link rel="stylesheet" href="./Cinema Admin_files/dataTables.bootstrap4.js.tải xuống">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End Plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="./Cinema Admin_files/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/assets-admin/images/favicon.ico">
+<style>.cke{visibility:hidden;}</style></head>
+
+<body cz-shortcut-listen="true">
+        <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="http://127.0.0.1:8000/index.html"><img src="./Cinema Admin_files/logo.svg" alt="logo"></a>
+        <a class="navbar-brand brand-logo-mini" href="http://127.0.0.1:8000/index.html"><img src="./Cinema Admin_files/logo-mini.svg" alt="logo"></a>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+        </button>
+        <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="http://127.0.0.1:8000/admin/bills#">
+                <div class="input-group">
+                    <div class="input-group-prepend bg-transparent">
+                        <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                    </div>
+                    <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+                </div>
+            </form>
+        </div>
+        <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+                <a class="nav-link dropdown-toggle" id="profileDropdown" href="http://127.0.0.1:8000/admin/bills#" data-toggle="dropdown" aria-expanded="false">
+                    <div class="nav-profile-img">
+                        <img src="./Cinema Admin_files/1632616804_face12.jpg" alt="image">
+                        <span class="availability-status online"></span>
+                    </div>
+                    <div class="nav-profile-text">
+                        <p class="mb-1 text-black">Ho Than Chinh</p>
+                    </div>
+                </a>
+                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/admin/dashboard/create">
+                        <i class="mdi mdi-account-outline mr-2 text-success"></i> Profile </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/logout">
+                        <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+                </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+                <a class="nav-link">
+                    <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="http://127.0.0.1:8000/admin/bills#" data-toggle="dropdown" aria-expanded="false">
+                    <i class="mdi mdi-email-outline"></i>
+                    <span class="count-symbol bg-warning"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                    <h6 class="p-3 mb-0">Messages</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <img src="./Cinema Admin_files/face4.jpg" alt="image" class="profile-pic">
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                            <p class="text-gray mb-0"> 1 Minutes ago </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <img src="./Cinema Admin_files/face2.jpg" alt="image" class="profile-pic">
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                            <p class="text-gray mb-0"> 15 Minutes ago </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <img src="./Cinema Admin_files/face3.jpg" alt="image" class="profile-pic">
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                            <p class="text-gray mb-0"> 18 Minutes ago </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="http://127.0.0.1:8000/admin/bills#" data-toggle="dropdown">
+                    <i class="mdi mdi-bell-outline"></i>
+                    <span class="count-symbol bg-danger"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                    <h6 class="p-3 mb-0">Notifications</h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-success">
+                                <i class="mdi mdi-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                            <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-warning">
+                                <i class="mdi mdi-settings"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                            <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-info">
+                                <i class="mdi mdi-link-variant"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                            <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                            <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+                </div>
+            </li>
+            <li class="nav-item nav-logout d-none d-lg-block">
+                <a class="nav-link" href="http://127.0.0.1:8000/admin/bills#">
+                    <i class="mdi mdi-power"></i>
+                </a>
+            </li>
+            <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="http://127.0.0.1:8000/admin/bills#">
+                    <i class="mdi mdi-format-line-spacing"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+        </button>
+    </div>
+</nav>        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="http://127.0.0.1:8000/admin/dashboard/create" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="./Cinema Admin_files/1632616804_face12.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">Ho Than Chinh</span>
+                    <span class="text-secondary text-small">Cinema Manager</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/dashboard">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/cinema">
+                <span class="menu-title">Cinema</span>
+                <i class="mdi mdi-map-marker-radius menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/movie-room">
+                <span class="menu-title">Movie Room</span>
+                <i class="mdi mdi-office menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/movie-chair">
+                <span class="menu-title">Movie Chair</span>
+                <i class="mdi mdi-seat-recline-extra menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/category">
+                <span class="menu-title">Film Category</span>
+                <i class="mdi mdi-image-filter-frames menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/film">
+                <span class="menu-title">Film</span>
+                <i class="mdi mdi-television-guide menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/time">
+                <span class="menu-title">Time</span>
+                <i class="mdi mdi-clock menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/show-time">
+                <span class="menu-title">Showtimes</span>
+                <i class="mdi mdi-clock-fast menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/blog">
+                <span class="menu-title">Posts</span>
+                <i class="mdi mdi-table-edit menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/food">
+                <span class="menu-title">Food</span>
+                <i class="mdi mdi-food menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/bills">
+                <span class="menu-title">Bills</span>
+                <i class="mdi mdi-cart-arrow-down menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/accounts">
+                <span class="menu-title">Accounts</span>
+                <i class="mdi mdi-account menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/comments">
+                <span class="menu-title">Comments</span>
+                <i class="mdi mdi-forum menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/review">
+                <span class="menu-title">Reviews</span>
+                <i class="mdi mdi-tooltip-outline menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/feedbacks">
+                <span class="menu-title">Feedback</span>
+                <i class="mdi mdi-bell-ring menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="http://127.0.0.1:8000/admin/bills#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">UI Elements</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="http://127.0.0.1:8000/admin/banner">Banner</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="http://127.0.0.1:8000/admin/logo">Logo</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="http://127.0.0.1:8000/admin/contact-info">Contact Info</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin/recycle-bin">
+                <span class="menu-title">Recycle Bin</span>
+                <i class="mdi mdi-cube-outline menu-icon"></i>
+            </a>
+        </li>
+    </ul>
+</nav> <div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row overflow-auto">
+                            <div class="col-12">
+                                <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="order-listing_length"><label>Show <select name="order-listing_length" aria-controls="order-listing" class="custom-select custom-select-sm form-control"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="-1">All</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="order-listing_filter" class="dataTables_filter"><label><input type="search" class="form-control" placeholder="Search" aria-controls="order-listing"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="order-listing" class="table dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="order-listing_info" style="width: 100%;">
+                                                <thead>
+                                                    <tr class="" role="row"><th class="sorting_asc" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Order #: activate to sort column descending" style="width: 65px;" aria-sort="ascending">Order #</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Customer: activate to sort column ascending" style="width: 79px;">Customer</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ship to: activate to sort column ascending" style="width: 89px;">Ship to</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Base Price: activate to sort column ascending" style="width: 84px;">Base Price</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Purchased Price: activate to sort column ascending" style="width: 126px;">Purchased Price</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 76px;">Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 338px;">Actions</th></tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+
+
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                <tr role="row" class="odd">
+                                                        <td class="sorting_1">WD-61</td>
+                                                        <td class="">Edinburgh</td>
+                                                        <td class="">New York</td>
+                                                        <td class="">$1500</td>
+                                                        <td class="">$3200</td>
+                                                        <td class="">
+                                                            <label class="badge badge-info">On hold</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">WD-61</td>
+                                                        <td class="">Edinburgh</td>
+                                                        <td class="">New York</td>
+                                                        <td class="">$1500</td>
+                                                        <td class="">$3200</td>
+                                                        <td class="">
+                                                            <label class="badge badge-info">On hold</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">WD-62</td>
+                                                        <td class="">Doe</td>
+                                                        <td class="">Brazil</td>
+                                                        <td class="">$4500</td>
+                                                        <td class="">$7500</td>
+                                                        <td class="">
+                                                            <label class="badge badge-danger">Pending</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">WD-62</td>
+                                                        <td class="">Doe</td>
+                                                        <td class="">Brazil</td>
+                                                        <td class="">$4500</td>
+                                                        <td class="">$7500</td>
+                                                        <td class="">
+                                                            <label class="badge badge-danger">Pending</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">WD-63</td>
+                                                        <td class="">Sam</td>
+                                                        <td class="">Tokyo</td>
+                                                        <td class="">$2100</td>
+                                                        <td class="">$6300</td>
+                                                        <td class="">
+                                                            <label class="badge badge-success">Closed</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">WD-63</td>
+                                                        <td class="">Sam</td>
+                                                        <td class="">Tokyo</td>
+                                                        <td class="">$2100</td>
+                                                        <td class="">$6300</td>
+                                                        <td class="">
+                                                            <label class="badge badge-success">Closed</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">WD-64</td>
+                                                        <td class="">Joe</td>
+                                                        <td class="">Netherland</td>
+                                                        <td class="">$1100</td>
+                                                        <td class="">$7300</td>
+                                                        <td class="">
+                                                            <label class="badge badge-warning">Open</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">WD-64</td>
+                                                        <td class="">Joe</td>
+                                                        <td class="">Netherland</td>
+                                                        <td class="">$1100</td>
+                                                        <td class="">$7300</td>
+                                                        <td class="">
+                                                            <label class="badge badge-warning">Open</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">WD-65</td>
+                                                        <td class="">Edward</td>
+                                                        <td class="">Indonesia</td>
+                                                        <td class="">$3600</td>
+                                                        <td class="">$4800</td>
+                                                        <td class="">
+                                                            <label class="badge badge-success">Closed</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">WD-65</td>
+                                                        <td class="">Edward</td>
+                                                        <td class="">Indonesia</td>
+                                                        <td class="">$3600</td>
+                                                        <td class="">$4800</td>
+                                                        <td class="">
+                                                            <label class="badge badge-success">Closed</label>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-eye text-primary"></i>View </button>
+                                                            <button class="btn btn-light">
+                                                                <i class="mdi mdi-close text-danger"></i>Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr></tbody>
+                                            </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 10 of 38 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="order-listing_previous"><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item next" id="order-listing_next"><a href="http://127.0.0.1:8000/admin/bills#" aria-controls="order-listing" data-dt-idx="5" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <!-- <script src="http://127.0.0.1:8000/assets-admin/vendors/js/vendor.bundle.base.js"></script> -->
+    <script src="./Cinema Admin_files/vendor.bundle.base.js.tải xuống"></script>
+    <!-- endinject -->
+
+    <!-- Plugin js for this page -->
+    <script src="./Cinema Admin_files/Chart.min.js.tải xuống"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="./Cinema Admin_files/off-canvas.js.tải xuống"></script>
+    <script src="./Cinema Admin_files/hoverable-collapse.js.tải xuống"></script>
+    <script src="./Cinema Admin_files/misc.js.tải xuống"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="./Cinema Admin_files/chart.js.tải xuống"></script>
+    <script src="./Cinema Admin_files/ckeditor.js.tải xuống"></script>
+    <script src="./Cinema Admin_files/jquery.dataTables.js.tải xuống"></script>
+<script src="./Cinema Admin_files/dataTables.bootstrap4.js.tải xuống"></script>
+<script src="./Cinema Admin_files/settings.js.tải xuống"></script>
+<script src="./Cinema Admin_files/todolist.js.tải xuống"></script>
+<script src="./Cinema Admin_files/jquery.cookie.js.tải xuống"></script>
+<script src="./Cinema Admin_files/data-table.js.tải xuống"></script>
+    
+   
+
+
+</body><div style="position: absolute; top: 0px;"></div></html>
